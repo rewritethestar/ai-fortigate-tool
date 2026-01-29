@@ -23,12 +23,13 @@
 
 ### 步驟
 
-1. Clone repo
+#### 1. Clone repo
    ```bash
    git clone https://github.com/yourusername/ai-fortigate-tool.git
    cd ai-fortigate-tool
 
-建立虛擬環境（強烈建議）cmdpython -m venv venv
+#### 2. 建立虛擬環境（強烈建議）cmdpython -m venv venv
+
 venv\Scripts\activate.bat
 安裝依賴cmdpip install openai httpx
 複製並修改 script 中的 API key 與 base_url（非常重要，勿 commit）
