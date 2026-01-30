@@ -24,27 +24,29 @@
 ### 步驟
 
 #### 1. Clone repo
-   ```bash
+   ``bash
    git clone https://github.com/yourusername/ai-fortigate-tool.git
    cd ai-fortigate-tool
 
 #### 2. 建立虛擬環境（強烈建議）cmdpython -m venv venv
 
 venv\Scripts\activate.bat
-安裝依賴cmdpip install openai httpx
-複製並修改 script 中的 API key 與 base_url（非常重要，勿 commit）
+
+#### 3. 安裝依賴cmdpip install openai httpx
+
+#### 4. 複製並修改 script 中的 API key 與 base_url（非常重要，勿 commit）
 打開 call_gpt_oss.py
 修改 api_key 與 base_url 為你自己的 RunPod endpoint
 
-執行cmdpython call_gpt_oss.py "你的問題"範例：cmdpython call_gpt_oss.py "FortiGate 1200D end of support 後有哪些風險"
+#### 5. 執行cmdpython call_gpt_oss.py "你的問題"範例：cmdpython call_gpt_oss.py "FortiGate 1200D end of support 後有哪些風險"
 python call_gpt_oss.py "這段 log 有什麼問題：date=2026-01-29 time=19:00:00 devname=FG1200D logid=0100040704 type=event subtype=system level=alert vd=root msg="Admin login failed" user="admin" srcip=10.1.1.100 reason="incorrect_password""
 
-輸出會存到
+### 輸出會存到
 
 螢幕（print）
 gpt_response.txt（追加模式）
 
-目前已知問題
+## 目前已知問題
 
 公司網路下必須 verify=False（安全性風險，請只在內網用）
 模型偶爾回 None content 或 choices 為空（已加防禦檢查）
@@ -53,16 +55,16 @@ token 成本未嚴格限制（一次 1000 output token ≈ $0.006，累積會貴
 
 下一步規劃（我自己的 todo list）
 
- 寫 requirements.txt 與 requirements-dev.txt
- 加 config.yaml 抽離 API key / base_url / model
- 加讀 log 檔功能（自動分析 FortiGate log）
- 加 retry mechanism（exponential backoff）
- 加 cost 上限警報（超過 $0.05 就警告）
- 寫基本 unit test（pytest）
- 加 CLI 介面（用 click 或 argparse）
- 整合到日常工作（e.g. VS Code extension 或 FortiAnalyzer plugin idea）
+[] 寫 requirements.txt 與 requirements-dev.txt
+[] 加 config.yaml 抽離 API key / base_url / model
+[]  加讀 log 檔功能（自動分析 FortiGate log）
+[]  加 retry mechanism（exponential backoff）
+[]  加 cost 上限警報（超過 $0.05 就警告）
+[]  寫基本 unit test（pytest）
+[]  加 CLI 介面（用 click 或 argparse）
+[]  整合到日常工作（e.g. VS Code extension 或 FortiAnalyzer plugin idea）
 
 歡迎 issue / PR，但目前還在早期開發階段，主要給自己用。
-License
+### License
 MIT（隨便用，但請保留原作者資訊）
 最後更新：2026-01-29
