@@ -65,6 +65,7 @@ token 成本未嚴格限制（一次 1000 output token ≈ $0.006，累積會貴
 - 整合到日常工作（e.g. VS Code extension 或 FortiAnalyzer plugin idea）
 
 歡迎 issue / PR，但目前還在早期開發階段，主要給自己用。
-### License
+
+## License
 MIT（隨便用，但請保留原作者資訊）
 最後更新：2026-01-29
