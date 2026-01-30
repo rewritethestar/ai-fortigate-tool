@@ -55,14 +55,14 @@ token 成本未嚴格限制（一次 1000 output token ≈ $0.006，累積會貴
 
 ## 下一步規劃（我自己的 todo list）
 
--[] 寫 requirements.txt 與 requirements-dev.txt
--[] 加 config.yaml 抽離 API key / base_url / model
--[]  加讀 log 檔功能（自動分析 FortiGate log）
--[]  加 retry mechanism（exponential backoff）
--[]  加 cost 上限警報（超過 $0.05 就警告）
--[]  寫基本 unit test（pytest）
--[]  加 CLI 介面（用 click 或 argparse）
--[]  整合到日常工作（e.g. VS Code extension 或 FortiAnalyzer plugin idea）
+- 寫 requirements.txt 與 requirements-dev.txt
+- 加 config.yaml 抽離 API key / base_url / model
+- 加讀 log 檔功能（自動分析 FortiGate log）
+- 加 retry mechanism（exponential backoff）
+- 加 cost 上限警報（超過 $0.05 就警告）
+- 寫基本 unit test（pytest）
+- 加 CLI 介面（用 click 或 argparse）
+- 整合到日常工作（e.g. VS Code extension 或 FortiAnalyzer plugin idea）
 
 歡迎 issue / PR，但目前還在早期開發階段，主要給自己用。
 ### License
